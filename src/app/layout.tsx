@@ -20,7 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <QueryProvider>
-          <RecoilProvider>{children}</RecoilProvider>
+          <RecoilProvider>
+            <div id="portal"></div>
+            {children}
+          </RecoilProvider>
         </QueryProvider>
       </body>
     </html>
