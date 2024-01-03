@@ -12,7 +12,7 @@ export default function ProfileCard({ imgUrl, name }: ProfileCardProps) {
   return (
     <Flex
       ai="center"
-      className="max-w-[300px] gap-2.5 border rounded-2xl mx-4 p-[12px]"
+      className="w-[200px] gap-2.5 border rounded-2xl mx-4 p-[12px]"
     >
       <ProfileImage size="small" imgUrl={imgUrl} />
       <Typo>{name}</Typo>
