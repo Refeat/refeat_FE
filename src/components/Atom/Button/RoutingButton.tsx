@@ -1,14 +1,13 @@
 "use client";
 
-import { useRouter } from "@/navigation";
-
-// import { useRouter } from "next/navigation.js";
+import PATH from "@/data/constants/path";
+import { useRouter } from "@/lib/i18n/navigation";
 
 const RoutingButton = () => {
   const router = useRouter();
   return (
-    <button className="bg-slate-500" onClick={() => router.push("/profile")}>
-      RoutingButton
+    <button onClick={() => router.push(PATH.PROFILE)}>
+      Routing to profile Button
     </button>
   );
 };

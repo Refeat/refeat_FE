@@ -1,7 +1,7 @@
 // test버튼입니다 예시로써 나중에 리팩토링or 삭제를 해야함
 "use client";
 
-import { usePathname, useRouter } from "@/navigation";
+import { usePathname, useRouter } from "@/lib/i18n/navigation";
 import { useLocale } from "next-intl";
 
 interface TranlateButtonProps {
