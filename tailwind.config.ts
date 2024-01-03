@@ -16,6 +16,9 @@ const config: Config = {
       desktop: "1280px",
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-pretendard-medium)"],
+      },
       colors: {
         skyblue: {
           100: "#B9EEFF",
