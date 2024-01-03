@@ -15,14 +15,28 @@ export default function Flex({
   className,
   onClick,
 }: FlexProps) {
-  const direction = `flex-${dir}`;
-  const justify = `justify-${jc}`;
-  const align = `items-${ai}`;
+  const direction = dir === "col" ? "flex-col" : "flex-row";
+  const justifyContent = {
+    center: "justify-center",
+    start: "justify-start",
+    end: "justify-end",
+    between: "justify-between",
+    around: "justify-around",
+  };
+  const alignItems = {
+    center: "items-center",
+    start: "items-start",
+    end: "items-end",
+    stretch: "items-stretch",
+    baseline: "items-baseline",
+  };
   return (
     <div
       id={id}
       onClick={onClick}
-      className={`flex ${direction} ${justify} ${align} ${className ?? ""}`}
+      className={`flex ${direction} ${jc ? justifyContent[jc] : ""} ${
+        ai ? alignItems[ai] : ""
+      } ${className ?? ""}`}
     >
       {children}
     </div>
