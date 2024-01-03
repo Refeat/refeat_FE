@@ -18,7 +18,7 @@ const ContentSample = ({ func }: { func?: () => void }) => {
   const trigger = () => func && func();
   return (
     <div className="w-[500px] h-[500px] bg-white text-black fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-      Hi I'm Modal
+      {`Hi I'm Modal`}
       <button onClick={() => trigger()} className="bg-black text-white">
         close
       </button>
