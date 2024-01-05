@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import QueryProvider from "@/lib/tanstack/QueryProvider";
 import RecoilProvider from "@/lib/recoil/RecoilProvider";
+import { notoSansKR, pretendardM } from "@/fonts";
+
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 type Props = {
@@ -10,7 +12,8 @@ type Props = {
   params: { locale: string };
 };
 
-const inter = Inter({ subsets: ["latin"] });
+
+
 
 export const metadata: Metadata = {
   title: "Refeat",
@@ -34,7 +37,7 @@ export default async function RootLayout({
   unstable_setRequestLocale(locale);
   return (
     <html lang={locale}>
-      <body className={inter.className}>
+       <body className={`${notoSansKR.variable} ${pretendardM.variable}`}>
         <QueryProvider>
           <RecoilProvider>
             <div id="portal"></div>
