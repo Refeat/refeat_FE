@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import QueryProvider from "@/lib/tanstack/QueryProvider";
 import RecoilProvider from "@/lib/recoil/RecoilProvider";
-
-const inter = Inter({ subsets: ["latin"] });
+import { notoSansKR, pretendardM } from "@/fonts";
 
 export const metadata: Metadata = {
   title: "Refeat",
@@ -18,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${notoSansKR.variable} ${pretendardM.variable}`}>
         <QueryProvider>
           <RecoilProvider>
             <div id="portal"></div>
