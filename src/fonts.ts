@@ -1,10 +1,17 @@
-import { Noto_Sans_KR } from "next/font/google";
+import { Inter, Noto_Sans_KR } from "next/font/google";
 import localFont from "next/font/local";
 
 export const notoSansKR = Noto_Sans_KR({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
   variable: "--font-noto-sans-kr",
+  display: "swap",
+});
+
+export const inter = Inter({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-inter",
   display: "swap",
 });
 

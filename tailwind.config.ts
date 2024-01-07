@@ -33,8 +33,8 @@ const config: Config = {
       error1: ["10px", "10px"],
       subhead1: ["12px", "18px"],
       subhead2: ["14px", "20px"],
-      subhead3: ["16px", "24px"],
-      subhead4: ["18px", "28px"],
+      subhead3: ["16px", "18px"],
+      subhead4: ["18px", "20px"],
       display1: ["24px", "36px"],
       display2: ["28px", "42px"],
       display3: ["32px", "48px"],
@@ -43,8 +43,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        typo: ["var(--font-pretendard-medium)"],
-        title: ["var(--font-pretendard-bold)"],
+        ko: ["var(--font-noto-sans-kr)"],
+        en: ["var(--font-inter)"],
       },
       colors: {
         skyblue: {
