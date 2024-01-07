@@ -4,7 +4,7 @@ import React from "react";
 interface ProfileImageProps {
   imgUrl?: string;
   className?: string;
-  size: "small" | "medium";
+  size: "xSmall" | "small" | "medium";
 }
 
 export default function ProfileImage({
@@ -13,6 +13,7 @@ export default function ProfileImage({
   size = "small",
 }: ProfileImageProps) {
   const sizeMap = new Map([
+    ["xSmall", "size-6"],
     ["small", "size-10"],
     ["medium", "size-16"],
   ]);
