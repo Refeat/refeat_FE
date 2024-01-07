@@ -13,7 +13,7 @@ const data = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen min-w-screen">
+    <main className="flex min-w-screen">
       <SideBar />
       <Flex dir="col" ai="center" className="w-full gap-[30px]">
         <Flex dir="col" ai="center">

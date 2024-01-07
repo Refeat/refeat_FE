@@ -18,7 +18,7 @@ export default function SideBar() {
       dir="col"
       ai="center"
       jc="start"
-      className="w-[296px] h-[90포] rounded-tr-xl shadow-2xl bg-white"
+      className="w-[296px] h-[90vh] rounded-tr-xl shadow-2xl bg-white"
     >
       <Modal content={<ProfileEdit />}>
         <ProfileCard name="Sangmin Lee" className="mt-[48px]" />
