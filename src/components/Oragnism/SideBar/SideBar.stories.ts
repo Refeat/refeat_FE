@@ -11,11 +11,5 @@ export default meta;
 type Story = StoryObj<typeof SideBar>;
 
 export const Default: Story = {
-  args: {
-    size: "small",
-  },
-};
-
-export const ImageAvailable: Story = {
   args: {},
 };
