@@ -1,22 +1,29 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/lib/i18n/navigation";
 import React, { ComponentProps } from "react";
 
 interface ButtonProps extends ComponentProps<"button"> {
   href?: string;
+  func?: () => void;
 }
 
-export default function Button({ children, onClick, href }: ButtonProps) {
+export default function Button({
+  children,
+  // onClick,
+  href,
+  func,
+  className,
+}: ButtonProps) {
   const router = useRouter();
 
   const onClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-    onClick && onClick(e);
+    func && func();
     href && router.push(href);
   };
   return (
     <button
-      className="w-3/5 h-[40px] bg-black text-white"
+      className={`w-[200px] h-[40px] text-white border-black ${className}`}
       onClick={onClickHandler}
     >
       {children}

@@ -11,5 +11,17 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    children: "Button",
+    onClick: () => {
+      alert("clicked!");
+    },
+  },
+};
+
+export const Basic: Story = {
+  args: {
+    children: "Button",
+    className: "rounded-md bg-gradient-to-r from-blue-500 to-purple-700",
+  },
 };

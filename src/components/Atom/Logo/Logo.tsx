@@ -8,8 +8,14 @@ interface LogoProps {
 }
 
 export default function Logo({ size = 40, className }: LogoProps) {
-  const logoSize = `h-10 w-auto`;
+  const logoSize = `h-[46px] w-[168px]`;
   return (
-    <Image src={RefeatLogo} alt="" className={`${logoSize} ${className}`} />
+    <Image
+      src={RefeatLogo}
+      alt=""
+      // width={168}
+      // height={46}
+      className={`${logoSize} ${className}`}
+    />
   );
 }

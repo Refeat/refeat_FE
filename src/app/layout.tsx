@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import QueryProvider from "@/lib/tanstack/QueryProvider";
 import RecoilProvider from "@/lib/recoil/RecoilProvider";
-import { notoSansKR, pretendardM } from "@/fonts";
+import { inter, notoSansKR, pretendardM } from "@/fonts";
+import Logo from "@/components/Atom/Logo/Logo";
+import HalfHeader from "@/components/Oragnism/HalfHeader/HalfHeader";
 
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
@@ -11,9 +13,6 @@ type Props = {
   children: React.ReactNode;
   params: { locale: string };
 };
-
-
-
 
 export const metadata: Metadata = {
   title: "Refeat",
@@ -37,10 +36,14 @@ export default async function RootLayout({
   unstable_setRequestLocale(locale);
   return (
     <html lang={locale}>
-       <body className={`${notoSansKR.variable} ${pretendardM.variable}`}>
+      <body
+        className={`bg-[#F8F9FC] ${notoSansKR.variable} ${pretendardM.variable} ${inter.variable}`}
+      >
         <QueryProvider>
           <RecoilProvider>
             <div id="portal"></div>
+
+            <HalfHeader />
             {children}
           </RecoilProvider>
         </QueryProvider>
