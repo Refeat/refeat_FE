@@ -7,17 +7,22 @@ interface ButtonProps extends ComponentProps<"button"> {
   href?: string;
 }
 
-export default function Button({ children, onClick, href }: ButtonProps) {
-  const router = useRouter();
+export default function Button({
+  children,
+  onClick,
+  href,
+  className,
+}: ButtonProps) {
+  // const router = useRouter();
 
-  const onClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-    onClick && onClick(e);
-    href && router.push(href);
-  };
+  // const onClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
+  //   onClick && onClick(e);
+  //   href && router.push(href);
+  // };
   return (
     <button
-      className="w-3/5 h-[40px] bg-black text-white"
-      onClick={onClickHandler}
+      className={`w-[200px] h-[40px] text-white border-black ${className}`}
+      onClick={onClick}
     >
       {children}
     </button>
