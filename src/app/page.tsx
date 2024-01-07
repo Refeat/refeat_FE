@@ -1,10 +1,7 @@
-import SideBar from "@/components/Oragnism/SideBar/SideBar";
-import Image from "next/image";
+import { redirect } from "@/lib/i18n/navigation.js";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen min-w-screen">
-      <SideBar />
-    </main>
-  );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect("/ko");
+
 }
